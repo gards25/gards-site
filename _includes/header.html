@@ -1,0 +1,30 @@
+<!-- capture and store URL -->
+{% capture location %}{{ page.url|split:'/' }}{% endcapture %}
+<header>
+  <div>
+    <a id="logo" href="{{ site.baseurl }}/">
+	    <h1>Garde Bee</h1>
+	    <h2>System Developer</h2>
+    </a>
+    <nav>
+	    <ul>
+		  <li>
+		    <a href="{{ site.baseurl }}/" 
+		    {% if location == "index.html" %} class="selected" {% endif %}>Portfolio</a>
+		  <li>
+	      <li>
+	        {% assign pages = site.pages | sort:"weight"  %}
+	        {% for page in pages %}
+	        <!--Compare page title to the URL -->
+	          {% assign current = page.title | downcase %}
+	          {% if page.title %}
+	          <a href="{{ page.url | prepend: site.baseurl }}" 
+	          {% if location == current %} class="selected" {% endif %}>{{ page.title }}
+	          </a>
+	          {% endif %}
+	        {% endfor %}
+	     
+	    </ul>
+    </nav>
+  </div>
+</header>
