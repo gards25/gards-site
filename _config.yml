@@ -2,9 +2,8 @@
 title: Gards | Developer
 email: gards.ladines@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+   A portfolio site by using Jekyll nad Github Pages.
+baseurl: '/gards-site'
 url: "http://sdt4-site.com" # the base hostname & protocol for your site
 
 # Build settings
